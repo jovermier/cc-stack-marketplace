@@ -10,18 +10,30 @@
   },
   "plugins": [
     {
-      "name": "cc-stack",
+      "name": "cc-stack-marketplace",
       "description": "Claude Code agents for Go, GraphQL, Next.js, and Playwright. 4 agents, 12 skills for code review and test generation.",
       "version": "1.0.0",
       "author": {
         "name": "jovermier",
         "url": "https://github.com/jovermier"
       },
-      "homepage": "https://github.com/jovermier/cc-stack",
-      "repository": "https://github.com/jovermier/cc-stack",
+      "homepage": "https://github.com/jovermier/cc-stack-marketplace",
+      "repository": "https://github.com/jovermier/cc-stack-marketplace",
       "license": "MIT",
-      "tags": ["code-review", "go", "golang", "graphql", "nextjs", "react", "playwright", "e2e-testing", "test-generation", "skills", "domain-knowledge"],
-      "source": "./plugins/cc-stack"
+      "tags": [
+        "code-review",
+        "go",
+        "golang",
+        "graphql",
+        "nextjs",
+        "react",
+        "playwright",
+        "e2e-testing",
+        "test-generation",
+        "skills",
+        "domain-knowledge"
+      ],
+      "source": "./plugins/cc-stack-marketplace"
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
-  "name": "cc-stack-agents",
+  "name": "cc-stack-marketplace",
   "description": "Claude Code agents for Go, GraphQL, Next.js, and Playwright. 4 agents, 12 skills for code review and test generation.",
   "version": "1.0.0",
   "author": {
     "name": "jovermier",
     "url": "https://github.com/jovermier"
   },
-  "homepage": "https://github.com/jovermier/cc-stack-agents",
-  "repository": "https://github.com/jovermier/cc-stack-agents",
+  "homepage": "https://github.com/jovermier/cc-stack-marketplace",
+  "repository": "https://github.com/jovermier/cc-stack-marketplace",
   "license": "MIT",
   "keywords": [
     "code-review",
