@@ -1,6 +1,6 @@
 {
-  "name": "cc-skillsmp",
-  "description": "Auto-add skills from SkillsMP.com marketplace to your project. Search and install Claude skills directly.",
+  "name": "skillsmp",
+  "description": "Auto-add skills from SkillsMP.com marketplace. Search, install, and auto-discover skills based on project context.",
   "version": "1.0.0",
   "author": {
     "name": "jovermier",
@@ -14,6 +14,7 @@
     "marketplace",
     "skillsmp",
     "skill-installation",
+    "auto-install",
     "productivity"
   ]
 }

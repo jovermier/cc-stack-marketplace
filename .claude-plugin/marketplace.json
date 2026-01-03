@@ -66,8 +66,8 @@
       "source": "./plugins/cc-playwright"
     },
     {
-      "name": "cc-skillsmp",
-      "description": "Auto-add skills from SkillsMP.com marketplace to your project. Search and install Claude skills directly using keyword or AI semantic search.",
+      "name": "skillsmp",
+      "description": "Auto-add skills from SkillsMP.com marketplace. Search, install, and auto-discover skills based on project context.",
       "version": "1.0.0",
       "author": {
         "name": "jovermier",
@@ -76,24 +76,9 @@
       "homepage": "https://github.com/jovermier/cc-stack-marketplace",
       "repository": "https://github.com/jovermier/cc-stack-marketplace",
       "license": "MIT",
-      "tags": ["skills", "marketplace", "skillsmp", "skill-installation", "productivity", "ai-search"],
-      "source": "./plugins/cc-skillsmp",
-      "commands": ["./skill-add.md", "./skill-discover.md"]
-    },
-    {
-      "name": "auto-skills",
-      "description": "Automatically detect project needs and install relevant skills from SkillsMP and other sources. Run /auto-skills to trigger.",
-      "version": "1.0.0",
-      "author": {
-        "name": "jovermier",
-        "url": "https://github.com/jovermier"
-      },
-      "homepage": "https://github.com/jovermier/cc-stack-marketplace",
-      "repository": "https://github.com/jovermier/cc-stack-marketplace",
-      "license": "MIT",
-      "tags": ["auto-install", "self-improving", "automation", "productivity", "skills"],
-      "source": "./plugins/auto-skills",
-      "commands": ["./auto-skills.md"],
+      "tags": ["skills", "marketplace", "skillsmp", "skill-installation", "auto-install", "productivity", "ai-search"],
+      "source": "./plugins/skillsmp",
+      "commands": ["./skill-add.md", "./skill-discover.md", "./auto-skills.md"],
       "skills": ["./skills/context-detection", "./skills/scan"]
     }
   ]
