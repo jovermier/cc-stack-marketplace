@@ -9,7 +9,7 @@ Automatically analyzes the current project to detect technologies, frameworks, a
 ## When to Use
 
 This skill is invoked when:
-- Running `/self-improve` command
+- Running `/auto-skills` command
 
 ## Detection Methods
 

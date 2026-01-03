@@ -9,7 +9,7 @@ Automatically discovers and installs Claude skills from SkillsMP.com, official s
 ## When to Use
 
 This skill is invoked when:
-- `/self-improve` command is run
+- `/auto-skills` command is run
 
 ## Skill Sources
 
@@ -99,7 +99,7 @@ When reviewing search results, prioritize skills with:
 
 ## Safety Rules
 
-- **Max 5 new skills per self-improve run** (avoid bloat)
+- **Max 5 new skills per auto-skills run** (avoid bloat)
 - **Never overwrite existing skills**
 - **Always report what was installed and why**
 - **Skip if `SKILLSMP_API_KEY` is not set**
@@ -111,7 +111,7 @@ When reviewing search results, prioritize skills with:
 After installing, always output:
 
 ```markdown
-## Self-Improvement Complete
+## Auto Skills Complete
 
 Skills installed to: ~/.claude/skills/ (workspace)
 

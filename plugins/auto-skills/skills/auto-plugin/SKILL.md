@@ -9,7 +9,7 @@ Automatically installs Claude Code plugins from configured marketplaces based on
 ## When to Use
 
 This skill is invoked when:
-- `/self-improve` command is run
+- `/auto-skills` command is run
 
 ## Plugin Mapping
 
