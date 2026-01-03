@@ -41,24 +41,33 @@ Already installed via `compound-engineering@every-marketplace`
 
 ## Installation Process
 
-1. **Search SkillsMP** using AI semantic queries
-2. **Review top 3 results** per technology detected
-3. **Check for duplicates** - skip if already installed
-4. **Install to project skills** (`.claude/skills/`)
-5. **Log installations** for transparency
+1. **Check `SKILL_INSTALL_LOCATION` env var** for target location
+   - `workspace` → install to `~/.claude/skills/` (default)
+   - `project` → install to `.claude/skills/`
+2. **Search SkillsMP** using AI semantic queries
+3. **Review top 3 results** per technology detected
+4. **Check for duplicates** - skip if already installed
+5. **Install to configured location**
+6. **Log installations** for transparency
 
 ## Commands Used
 
 ```bash
+# Determine installation location
+SKILL_DIR="${SKILL_INSTALL_LOCATION:-workspace}"
+if [ "$SKILL_DIR" = "workspace" ]; then
+  TARGET="$HOME/.claude/skills"
+else
+  TARGET=".claude/skills"
+fi
+
 # Search SkillsMP API
 curl -X GET "https://skillsmp.com/api/v1/skills/ai-search?q=<encoded_query>" \
   -H "Authorization: Bearer $SKILLSMP_API_KEY"
 
-# Clone skill to project
-git clone <repo_url> .claude/skills/<skill_name>
-
-# Create skills directory if needed
-mkdir -p .claude/skills
+# Clone skill to target location
+mkdir -p "$TARGET"
+git clone <repo_url> "$TARGET/<skill_name>"
 ```
 
 ## Example Workflow
@@ -104,6 +113,8 @@ After installing, always output:
 ```markdown
 ## Self-Improvement Complete
 
+Skills installed to: ~/.claude/skills/ (workspace)
+
 Installed 3 new skills:
 
 1. **go-performance** (⭐ 234)
@@ -123,6 +134,7 @@ Installed 3 new skills:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
+| `SKILL_INSTALL_LOCATION` | No | Where to install skills: `workspace` (~/.claude/skills/) or `project` (.claude/skills/). Default: `workspace` |
 | `SKILLSMP_API_KEY` | Yes | API key for SkillsMP.com |
 | `AUTO_SKILL_MAX` | No | Max skills to install (default: 5) |
 | `AUTO_SKILL_ENABLED` | No | Disable auto-skill (default: true) |
